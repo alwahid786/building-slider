@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Draggable Range Slider</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="range-container">
+    <input type="range" class="slider" min="0" max="7" value="0">
+    <div class="range-marks">
+      <span class="range-mark"></span>
+      <span class="range-mark"></span>
+      <span class="range-mark"></span>
+      <span class="range-mark"></span>
+      <span class="range-mark"></span>
+      <span class="range-mark"></span>
+      <span class="range-mark"></span>
+      <span class="range-mark"></span>
+    </div>
+  </div>
+  <div class="images">
+    <img src="assets/final/0.jpg" class="image" id="image0">
+    <img src="assets/final/1.png" class="image" id="image1">
+    <img src="assets/final/2.png" class="image" id="image2">
+    <img src="assets/final/3.png" class="image" id="image3">
+    <img src="assets/final/4.png" class="image" id="image4">
+    <img src="assets/final/5.png" class="image" id="image5">
+    <img src="assets/final/6.png" class="image" id="image6">
+    <img src="assets/final/7.png" class="image" id="image7">
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const slider = document.querySelector('.slider');
+      const images = document.querySelectorAll('.image');
+  
+      // Initially set the first image as active
+      images[0].classList.add('active');
+  
+      // Add event listener to the slider input
+      slider.addEventListener('input', function() {
+        const value = parseInt(this.value);
+        images.forEach(image => {
+          if (parseInt(image.id.replace('image', '')) === value) {
+            image.classList.add('active');
+          } else {
+            image.classList.remove('active');
+          }
+        });
+      });
+    });
+  </script>
+  
+</body>
+</html>
