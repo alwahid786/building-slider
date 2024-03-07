@@ -20,13 +20,14 @@
       right: 2%;
       transform: translate(50%, -50%) rotate(-90deg);
       transform-origin: center center;
-      width: 25%;
-      background-color: #00000093;
+      width: 30%;
+      /* background-color: #00000093; */
       padding: 9px 15px;
       display: flex;
       align-items: center;
       gap: 1rem;
       border-radius: 10px;
+      filter: drop-shadow(0px 4px 0px rgba(0,0,0,0.9));
     }
 
     input[type="range"] {
@@ -41,10 +42,10 @@
     input[type="range"]::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
-      width: 20px;
-      height: 30px;
-      background-color: #383838;
-      border-radius: 6px;
+      width: 28px;
+      height: 28px;
+      background-color: orange;
+      border-radius: 50%;
       cursor: pointer;
       position: relative;
       z-index: 2;
@@ -52,38 +53,19 @@
       cursor: grab;
     }
 
-    input[type="range"]::-webkit-slider-thumb::before {
-      content: attr(data-value);
-      position: absolute;
-      bottom: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #000;
-      color: #fff;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 14px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    input[type="range"]:hover::-webkit-slider-thumb::before {
-      opacity: 1;
-    }
-
     .range-marks {
       display: flex;
       justify-content: space-between;
       position: absolute;
-      width: 81.8%;
-      top: 0%;
+      width: 81.1%;
+      top: -12%;
       transform: translateY(50%);
     }
 
     .range-mark {
       position: relative;
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
       border-radius: 50%; 
       background-color: white;
       display: flex;
@@ -91,7 +73,7 @@
       justify-content: center;
       color: black; 
       font-family: cursive;
-      font-size: 14px;
+      font-size: 17px;
     }
 
     .images-container {
@@ -118,13 +100,13 @@
 
     @media screen and (-webkit-min-device-pixel-ratio:0) {
       .range-marks {
-        width: 77.9%;
-        top: 0%;
+        width: 81.1%;
+        top: -12%;
       }
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
         .range-marks {
           width: 81.8% !important;
-          top: 0%;
+          top: -12%;
         }
       }
     }
