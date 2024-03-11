@@ -36,7 +36,7 @@
       width: 400px;
       height: 60px;
       padding: 20px;
-      background: #262626;
+      background: #2626264f;
       border-radius: 10px;
       box-shadow: -2px -2px 8px white, 2px 2px 8px rgba(0, 0, 0, 0.5);
       transform: rotate(-90deg);
@@ -49,15 +49,15 @@
       align-items: center;
       height: 20px;
       border-radius: 10px;
-      box-shadow: inset -2px -2px 8px white,
+      box-shadow: inset -2px -2px 8px #707070,
         inset 2px 2px 8px rgba(0, 0, 0, 0.5);
         background: #707070;
     }
     .range-style::-webkit-slider-thumb {
       position: relative;
-      top: -20%;
-      width: 30px;
-      height: 30px;
+      top: -8%;
+      width: 25px;
+      height: 25px;
       background-color: #11a400;
       background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.8), transparent);
       border-radius: 50%;
@@ -77,9 +77,9 @@
     }
     .range-style::-moz-range-thumb {
       position: relative;
-      top: -50%;
-      width: 40px;
-      height: 40px;
+      top: -8%;
+      width: 25px;
+      height: 25px;
       background-color: #e0e0e0;
       background-image: linear-gradient(
         -45deg,
@@ -108,20 +108,22 @@
     /* Styles for the range marks */
     .range-marks {
       position: absolute;
-      top: 54%;
+      top: 52%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      right: 62px;
+      right: 30px;
       transform: rotate(90deg);
-      width: 349px;
+      width: 340px;
+      z-index: -1;
     }
     .mark {
       width: 4px;
-      height: 17px;
-      border-radius: 2px;
-      background-color: #262626;
+      height: 40px;
+      border-radius: 1px;
+      background-color: #707070;
       cursor: pointer;
+      padding: 0;
     }
   </style>
 </head>
