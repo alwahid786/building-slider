@@ -364,14 +364,38 @@
                             </div>
                         </div>
                     </div>
+                    <div class="bg-light px-3 py-4 mt-3 rounded">
+                        <h4 class="">Today's Details</h4>
+                        <div class="d-flex align-items-center justify-content-between w-50 mt-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-lightning-charge-fill" viewBox="0 0 16 16" style="color:rgb(0, 210, 210)">
+                                <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+                            </svg>
+                            <div>
+                                <p class="f-sm">Present Load</p>
+                                <div class="d-flex mt-1">
+                                    <span class="py-2 px-4 bg-secondary rounded-pill"></span>
+                                    <strong class="ml-1">kWh</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border border-1 my-4"></div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <canvas id="pieChart"></canvas>
+                            </div>
+                            <div id="pieChartValues">
+                                
+                            </div>                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </section>
 
-
-    <script src="assets/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/script.js"></script>
 
     <script>
       $(document).ready(function () {
