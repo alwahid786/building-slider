@@ -16,3 +16,12 @@ li {
 .flex-gap-2 {
     gap: 12px;
 }
+.flex-gap-3 {
+    gap: 16px;
+}
+.f-sm {
+    font-size: 13px;
+}
+.f-xs {
+    font-size: 10px;
+}
