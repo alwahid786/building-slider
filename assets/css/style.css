@@ -5,7 +5,7 @@
 }
 
 body {
-    background: rgb(233, 233, 233);
+    background: #DDE0E7;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -38,7 +38,7 @@ li {
   }
 
   .form-range {
-    width: 99%;
+    width: 101%;
     z-index: 2; /* Ensure slider is above the lines */
     position: relative;
     margin-bottom: 14px;
@@ -123,15 +123,14 @@ background-color: red;
     padding: 0px 15px 0px 15px;
     background-color: rgba(0, 0, 0, 0.482);
     position: absolute;
-    width: 20px;
-    top: 28%; /* Vertically centering */
+    width: 68%;
+    top: 51%; /* Vertically centering */
     right: 5%; /* Positioned 2% from the right */
     transform: translate(50%, -50%) rotate(270deg); /* Rotating 90 degrees and centering */
     transform-origin: center center; /* Rotating around the center */
   }
   .imagesContainer {
     width: 100%;
-    height: 100%;
     overflow: hidden;
     position: relative;
   }

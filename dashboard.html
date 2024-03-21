@@ -10,7 +10,7 @@
 </head>
 <body>
     <section class="container-fluid">
-        <section class="container py-5">
+        <section class="container">
             <!-- Dashboard top bar -->
             <div class="row bg-primary rounded">
                 <div class="col-12 col-md-3">
@@ -257,7 +257,7 @@
                     </div>
                     <!-- Building section -->
                     <div class="imagesContainer mt-3">
-                        <div class="rangeContainer w-50 d-flex align-items-center justify-content-center" style="gap:10px;">
+                        <div class="rangeContainer d-flex align-items-center justify-content-center" style="gap:10px;">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="
                               width: 12px;fill: #fff;"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"></path></svg>
                             <div class="range-slider-container m-0 w-100">
@@ -277,8 +277,8 @@
                             width: 12px;fill: #fff;"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
                           </svg>
                         </div>
-                        <img src="./assets/final/0.jpg" class="images" id="image0" style="display: none" />
-                        <img src="./assets/final/1.png" class="images" id="image1" />
+                        <img src="./assets/final/0.jpg" class="images" id="image0" />
+                        <img src="./assets/final/1.png" class="images" id="image1" style="display: none" />
                         <img src="./assets/final/2.png" class="images" id="image2" style="display: none" />
                         <img src="./assets/final/3.png" class="images" id="image3" style="display: none" />
                         <img src="./assets/final/4.png" class="images" id="image4" style="display: none" />
@@ -380,7 +380,7 @@
           if (value == 0) {
             $("body").css("background-color", "#DDE0E7");
           } else {
-            $("body").css("background-color", "#E9E9E9");
+            $("body").css("background-color", "#DDE0E7");
           }
           // Hide all images
           $("[id^=image]").hide();
