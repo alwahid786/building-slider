@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+body {
+    background: rgb(233, 233, 233);
+}
+
 p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0 !important;
 }
@@ -25,3 +29,114 @@ li {
 .f-xs {
     font-size: 10px;
 }
+
+/* Building css */
+.range-slider-container {
+    position: relative;
+    width: 100%;
+    margin-top: 20px; /* Space for lines */
+  }
+
+  .form-range {
+    width: 99%;
+    z-index: 2; /* Ensure slider is above the lines */
+    position: relative;
+    margin-bottom: 14px;
+  }
+
+  .range-marks {
+    display: flex;
+    position: absolute;
+    width: 99%;
+    top: 36%; /* Adjust to align with the middle of the slider */
+    left: 0;
+    pointer-events: none;
+    transform: translateY(-50%); /* Center marks vertically */
+  }
+
+  .mark {
+    position: absolute;
+    display: block;
+    height: 9px;
+    border-radius: 8px;
+    width: 1px;
+    padding: 1px;
+    background: #fff;
+    top: 5px;
+    transform: translateY(-50%);
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    background: #fff !important; /* Gray track */
+    height: 2px;
+  }
+
+  input[type="range"]::-moz-range-track {
+    background: #fff !important; /* Gray track */
+    height: 2px;
+  }
+
+  input[type="range"]::-ms-track {
+    background: #fff !important; /* Gray track */
+    height: 2px;
+  }
+
+  /* Styles the thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    background: blue !important; /* Blue thumb */
+    cursor: pointer;
+    border-radius: 50%; /* Makes it circular */
+    margin-top: -9px; /* Adjusts the position to be centered on the track */
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    background: blue !important; /* Blue thumb */
+    cursor: pointer;
+    border-radius: 50%; /* Makes it circular */
+  }
+
+  input[type="range"]::-ms-thumb {
+    height: 20px;
+    width: 20px;
+    background: blue !important; /* Blue thumb */
+    cursor: pointer;
+    border-radius: 50%; /* Makes it circular */
+  }
+
+  .range-container input[type="range"]::-webkit-slider-thumb {
+background-color: red;
+}
+
+.range-container input[type="range"]::-moz-range-thumb {
+background-color: red;
+}
+
+.range-container input[type="range"]::-ms-thumb {
+background-color: red;
+}
+
+  .rangeContainer {
+    padding: 0px 15px 0px 15px;
+    background-color: rgba(0, 0, 0, 0.482);
+    position: absolute;
+    width: 20px;
+    top: 28%; /* Vertically centering */
+    right: 5%; /* Positioned 2% from the right */
+    transform: translate(50%, -50%) rotate(270deg); /* Rotating 90 degrees and centering */
+    transform-origin: center center; /* Rotating around the center */
+  }
+  .imagesContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .images {
+    width: 90%;
+    object-fit: contain;
+    transition: opacity .5s ease;
+  }

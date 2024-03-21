@@ -40,6 +40,7 @@
 
             <!-- Dashboard Main -->
             <div class="row mt-3">
+                <!-- main section - First column -->
                 <div class="col-md-3 px-0 g-3">
                     <div class="bg-light px-3 py-4 rounded">
                         <div class="d-flex align-items-start justify-content-between">
@@ -179,6 +180,7 @@
                     </div>
                 </div>
 
+                <!-- main section - Second column -->
                 <div class="col-md-6">
                     <!-- first section -->
                     <div class="d-flex flex-wrap flex-gap-3">
@@ -253,8 +255,40 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Building section -->
+                    <div class="imagesContainer mt-3">
+                        <div class="rangeContainer w-50 d-flex align-items-center justify-content-center" style="gap:10px;">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="
+                              width: 12px;fill: #fff;"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"></path></svg>
+                            <div class="range-slider-container m-0 w-100">
+                            <input type="range" class="form-range" min="0" max="7" id="floorsRange" value="1">
+                            <div class="range-marks">
+                              <span class="mark" style="left: 0%"></span>
+                              <span class="mark" style="left: 14.2857%"></span> <!-- Adjusted for 7 steps -->
+                              <span class="mark" style="left: 28.5714%"></span> <!-- Adjusted for 7 steps -->
+                              <span class="mark" style="left: 42.8571%"></span> <!-- Adjusted for 7 steps -->
+                              <span class="mark" style="left: 57.1429%"></span> <!-- Adjusted for 7 steps -->
+                              <span class="mark" style="left: 71.4286%"></span> <!-- Adjusted for 7 steps -->
+                              <span class="mark" style="left: 85.7143%"></span> <!-- Adjusted for 7 steps -->
+                              <span class="mark" style="left: 100%"></span>
+                            </div>
+                          </div>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="
+                            width: 12px;fill: #fff;"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
+                          </svg>
+                        </div>
+                        <img src="./assets/final/0.jpg" class="images" id="image0" style="display: none" />
+                        <img src="./assets/final/1.png" class="images" id="image1" />
+                        <img src="./assets/final/2.png" class="images" id="image2" style="display: none" />
+                        <img src="./assets/final/3.png" class="images" id="image3" style="display: none" />
+                        <img src="./assets/final/4.png" class="images" id="image4" style="display: none" />
+                        <img src="./assets/final/5.png" class="images" id="image5" style="display: none" />
+                        <img src="./assets/final/6.png" class="images" id="image6" style="display: none" />
+                        <img src="./assets/final/7.png" class="images" id="image7" style="display: none" />
+                      </div>
                 </div>
 
+                <!-- main section - Third column -->
                 <div class="col-md-3 px-0">
                     <div class="bg-light rounded">
                         <div class="px-3 py-4 d-flex align-items-center justify-content-between">            
@@ -337,5 +371,23 @@
 
 
     <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#floorsRange").on("input", function () {
+          var value = $(this).val();
+          if (value == 0) {
+            $("body").css("background-color", "#DDE0E7");
+          } else {
+            $("body").css("background-color", "#E9E9E9");
+          }
+          // Hide all images
+          $("[id^=image]").hide();
+          // Show the image corresponding to the current value
+          $("#image" + value).show();
+        });
+      });
+    </script>
 </body>
 </html>
