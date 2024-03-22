@@ -36,7 +36,7 @@ const totalPieChartData = pieChartData.datasets[0].data.reduce((acc, curr) => ac
 
 document.querySelector('#pieCharTotal').innerHTML = `<h6 class="f-sm">Total Room: ${totalPieChartData}</h6>`;
 
-const dataLength = pieChartData.datasets[0].data.length;
+// const dataLength = pieChartData.datasets[0].data.length;
 
 const pieChartValues = pieChartData.datasets[0].data.map((value, index) => {
     const label = pieChartData.labels[index];
@@ -79,35 +79,35 @@ const doughnutData = {
     }]
 };
 
-
-const doughnutTotalPlugin = {
-    afterDraw: function(chart) {
-        const ctx = chart.ctx;
-        const canvas = chart.canvas;
-        const chartArea = chart.chartArea;
-        const sum = chart.data.datasets[0].data.reduce((acc, value) => acc + value, 0);
-
-        // Display total in the center
-        ctx.save();
-        ctx.fillStyle = '#000000'; // Set the color of the text
-        ctx.font = '10px Arial'; // Set the font size and family
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText(sum, (chartArea.left + chartArea.right) / 2, (chartArea.top + chartArea.bottom) / 2);
-        ctx.restore();
-    }
-};
-
 const myDoughnut = new Chart(Doughnut, {
     type: 'doughnut',
     data: doughnutData,
     options: {
         cutout: '80%',
         plugins: {
-            doughnutTotal : doughnutTotalPlugin,
             legend: {
                 display: false,
             }
         }
     }
 })
+
+const doughnutContainer = document.querySelector('#DoughnutValues');
+
+const doughnutValues = doughnutData.datasets[0].data.map((value, index) => {
+    const label = doughnutData.labels[index];
+    const color = doughnutData.datasets[0].backgroundColor[index];
+
+    return `
+        <div class="d-flex flex-column mt-3">
+            <div class="d-flex align-items-center flex-gap-1">
+                <div style="width:10px; height:10px; background-color:${color}; border-radius:50%;"></div>
+                <h6>${value}</h6>
+            </div>
+            <p class="f-sm">${label}</p>
+        </div>
+    `
+}).join('');
+
+
+doughnutContainer.innerHTML = doughnutValues;
