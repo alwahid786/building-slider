@@ -111,3 +111,91 @@ const doughnutValues = doughnutData.datasets[0].data.map((value, index) => {
 
 
 doughnutContainer.innerHTML = doughnutValues;
+
+
+// Bar chart
+const barLineCtx = document.getElementById('barLineChart').getContext('2d');
+
+const barLineData = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+        {
+            label: 'Bar Dataset',
+            type: 'bar',
+            data: [8, 19, 3, 15, 2, 3, 20],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+        },
+        {
+            label: 'Line Dataset',
+            type: 'line',
+            data: [12, 19, 3, 5, 2, 3, 20],
+            fill: false,
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 2
+        }
+    ]
+};
+
+const barLineChart = new Chart(barLineCtx, {
+    type: 'bar',
+    data: barLineData,
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+
+// Two lines chart
+
+const twoLineCtx = document.getElementById('twoLineChart').getContext('2d');
+
+        const twoLineChartData = {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [
+                {
+                    label: 'Line 1',
+                    data: [10, 20, 15, 25, 30, 35, 40],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.4 // Adjust curvature of line
+                },
+                {
+                    label: 'Line 2',
+                    data: [5, 15, 10, 20, 25, 20, 30],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.4 // Adjust curvature of line
+                }
+            ]
+        };
+
+        const lineChartOptions = {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                shadowedLine: {
+                    shadowColor: 'rgba(0, 0, 0, 0.3)',
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowOffsetY: 5
+                }
+            }
+        };
+
+        const lineChart = new Chart(twoLineCtx, {
+            type: 'line',
+            data: twoLineChartData,
+            options: lineChartOptions
+        });
+
