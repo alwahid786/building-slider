@@ -379,13 +379,25 @@
                             </div>
                         </div>
                         <div class="border border-1 my-4"></div>
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div>
+                        <!-- Pie chart -->
+                        <div class="d-flex align-items-center justify-content-between flex-gap-2">
+                            <div class="w-50 flex-fill">
                                 <canvas id="pieChart"></canvas>
                             </div>
-                            <div id="pieChartValues">
-                                
-                            </div>                            
+                            <div>
+                                <div id="pieCharTotal"></div>
+                                <div class="mt-1" id="pieChartValues"></div>  
+                            </div>                        
+                        </div>
+                        <!-- Pie chart -->
+                        <div class="d-flex align-items-center justify-content-between flex-gap-2">
+                            <div class="w-50 flex-fill">
+                                <canvas id="Doughnut"></canvas>
+                            </div>
+                            <div>
+                                <div id="DoughnutTotal"></div>
+                                <div class="mt-1" id="DoughnutValues"></div>  
+                            </div>                        
                         </div>
                     </div>
                 </div>
