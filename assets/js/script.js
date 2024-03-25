@@ -117,24 +117,29 @@ doughnutContainer.innerHTML = doughnutValues;
 const barLineCtx = document.getElementById('barLineChart').getContext('2d');
 
 const barLineData = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['Lorem', 'ipsum', 'Lorem', 'ipsum', 'Lorem', 'ipsum', 'Lorem', 'ipsum', 'Lorem', 'ipsum', 'Lorem'],
     datasets: [
         {
-            label: 'Bar Dataset',
-            type: 'bar',
-            data: [8, 19, 3, 15, 2, 3, 20],
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
-            borderWidth: 1
+            // label: 'Line Dataset',
+            type: 'line',
+            data: [5, 3, 9, 3, 5, 9, 5, 8, 12, 4, 8],
+            fill: false,
+            borderColor: 'rgb(87, 21, 255, 0.7)',
+            borderWidth: 2,
+            borderRadius: 5, 
+            borderSkipped: 'start',
+            tension: 0.4
         },
         {
-            label: 'Line Dataset',
-            type: 'line',
-            data: [12, 19, 3, 5, 2, 3, 20],
-            fill: false,
-            borderColor: 'rgba(54, 162, 235, 1)',
-            borderWidth: 2
+            // label: 'Bar Dataset',
+            type: 'bar',
+            data: [10, 15, 18, 18, 10, 14, 10, 16, 19, 9, 17],
+            backgroundColor: 'rgb(0, 110, 255)',
+            borderColor: 'rgb(0, 110, 255)',
+            borderWidth: 1, 
+            borderRadius: 5
         }
+        
     ]
 };
 
@@ -156,23 +161,24 @@ const barLineChart = new Chart(barLineCtx, {
 const twoLineCtx = document.getElementById('twoLineChart').getContext('2d');
 
         const twoLineChartData = {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: ['Lorem', 'ipsum', 'Lorem', 'ipsum', 'Lorem', 'ipsum', 'Lorem', 'ipsum', 'Lorem', 'ipsum', 'Lorem'],
             datasets: [
                 {
-                    label: 'Line 1',
-                    data: [10, 20, 15, 25, 30, 35, 40],
+                    // label: 'Line 1',
+                    data: [5, 8, 15, 9, 12, 18, 13, 5, 3, 8, 12],
                     borderColor: 'rgba(255, 99, 132, 1)',
                     borderWidth: 2,
-                    fill: false,
-                    tension: 0.4 // Adjust curvature of line
+                    borderRadius: 5, 
+                    borderSkipped: 'start',
+                    tension: 0.4
                 },
                 {
-                    label: 'Line 2',
-                    data: [5, 15, 10, 20, 25, 20, 30],
+                    // label: 'Line 2',
+                    data: [3, 6, 4, 2, 7, 4, 22, 10, 5, 3, 8],
                     borderColor: 'rgba(54, 162, 235, 1)',
                     borderWidth: 2,
                     fill: false,
-                    tension: 0.4 // Adjust curvature of line
+                    tension: 0.4
                 }
             ]
         };

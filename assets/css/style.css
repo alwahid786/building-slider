@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #DDE0E7;
+    background: rgb(221, 224, 231) !important;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -28,6 +28,12 @@ li {
 }
 .f-xs {
     font-size: 10px;
+}
+.bg-black {
+    background-color: #000;
+}
+.index-1 {
+    z-index: 1;
 }
 
 /* Building css */
@@ -124,7 +130,7 @@ background-color: red;
     background-color: rgba(0, 0, 0, 0.482);
     position: absolute;
     width: 68%;
-    top: 51%; /* Vertically centering */
+    top: 50%; /* Vertically centering */
     right: 5%; /* Positioned 2% from the right */
     transform: translate(50%, -50%) rotate(270deg); /* Rotating 90 degrees and centering */
     transform-origin: center center; /* Rotating around the center */
