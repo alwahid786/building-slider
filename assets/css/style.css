@@ -5,7 +5,7 @@
 }
 
 body {
-    background: rgb(221, 224, 231) !important;
+    background: #fff !important;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -34,6 +34,9 @@ li {
 }
 .index-1 {
     z-index: 1;
+}
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
 /* Building css */
